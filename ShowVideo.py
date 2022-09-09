@@ -34,7 +34,7 @@ The resulting 'video' pauses for half a second if:
 """
 
 
-video_file = '2_5.mp4'
+video_file = 'archive/test_6.mp4'
 
 
 def get_frames_metadata(file):
@@ -210,7 +210,7 @@ if __name__ == '__main__':
             x, y = 50, 50
             frame = cv2.putText(frame, str("{:0.2f}%".format(perc * 100)), (x, y), font, font_size, (255, 255, 255), font_thickness, cv2.LINE_AA)
 
-            wait = 500
+            wait = 0
             if not i in iframes and str(classes[i]) == guess:
                 wait = int(10 * math.exp((1 - perc) * 8))
 
